@@ -25,8 +25,8 @@ const App = () => {
         <div className="flex-grow bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
           <main className="content-wrapper container mx-auto px-4 py-8 pt-20">
             <Routes>
-              <Route path="/portfolio" element={<Home />} />
               <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Home />} />
               <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
