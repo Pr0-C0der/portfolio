@@ -26,7 +26,6 @@ const App = () => {
           <main className="content-wrapper container mx-auto px-4 py-8 pt-20">
             <Routes>
               {/* Route for both "/" and "/portfolio/" */}
-              <Route path="/portfolio/" element={<Home />} />
               <Route path="/" element={<Home />} />
               <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
