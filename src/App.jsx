@@ -27,6 +27,7 @@ const App = () => {
             <Routes>
               {/* Route for both "/" and "/portfolio/" */}
               <Route path="/" element={<Home />} />
+              <Route path="/portfolio/" element={<Home />} />
               <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
