@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  const homePath = "/portfolio" //Home path is /{name of repository}
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -30,9 +31,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               {['Home', 'Education', 'Experience', 'Projects', 'Publications', 'Certifications', 'Contact'].map((item) => (
                 <Link
                   key={item}
-                  to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                  to={item === 'Home' ? homePath : `/${item.toLowerCase()}`}
                   className={`px-3 py-2 rounded-md text-sm font-medium ${
-                    location.pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`)
+                    location.pathname === (item === 'Home' ? homePath : `/${item.toLowerCase()}`)
                       ? 'text-blue-600 dark:text-blue-400'
                       : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                   } transition-colors duration-200`}
@@ -67,9 +68,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           {['Home', 'Education', 'Experience', 'Projects', 'Publications', 'Certifications', 'Contact'].map((item) => (
             <Link
               key={item}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              to={item === 'Home' ? homePath : `/${item.toLowerCase()}`}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                location.pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`)
+                location.pathname === (item === 'Home' ? homePath : `/${item.toLowerCase()}`)
                   ? 'text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800'
                   : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
               } transition-colors duration-200`}
